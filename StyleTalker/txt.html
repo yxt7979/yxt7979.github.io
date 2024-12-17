@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="StyleTalker: Stylized Talking Head Avatar from Monocular Video">
+  <meta name="keywords" content="StyleTalker, StyleTalker: Stylized Talking Head Avatar from Monocular Video,Stylized Talking Head Avatar from Monocular Video, 3D-GS, head avatar, 3D editting">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StyleTalker</title>
+
+  <!-- Bootstrap -->
+  <link href="static/css/bootstrap-4.4.1.css" rel="stylesheet">
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 publication-title" style="margin-top: 0; margin-bottom: 2">StyleTalker: Stylized Talking Head Avatar from Monocular Video</h2>
+            <!-- <h2 class="title is-4 publication-title" style="margin-top: 0; margin-bottom: 0">SIGGRAPH Asia 2022 (Journal Track)</h2> -->
+          <h2 class="title is-4 publication-title" style="color:#6e6e6e;margin-top: 2; margin-bottom: 2">Arxiv</h2>
+          <!-- <h2 class="title is-2 publication-title" style="margin-top: 0"></h2> -->
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://github.com/yxt7979">Xueting Yang</a><sup>†1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><a href="https://yukangcao.github.io/">Yukang Cao</a><sup>†2</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><a href="">Junli Deng</a><sup>3</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><a href="https://zhaoxinf.github.io/">Zhaoxin Fan</a><sup>4</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><a href="https://www.kaihan.org/">Kai Han</a><sup>*1</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">
+              <a href="https://i.cs.hku.hk/~kykwong/">Kwan-Yee K. Wong</a><sup>*1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Hong Kong</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>2</sup>S-Lab, Nanyang Technological University</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>3</sup>Communication University of China</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block"><sup>4</sup>Beihang University of China</span>&nbsp;&nbsp;&nbsp;&nbsp;
+          </div>
+            † These authors contributed equally to this work. * represents the corresponding author.
+          <!-- <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Science and Technology of China</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <span class="author-block"><sup>2</sup>Image Derivative Inc</span>&nbsp;&nbsp;&nbsp;&nbsp; -->
+          <!-- </div> --> 
+
+          <!-- <div class="is-size-6 publication-authors">
+            <span class="author-block">(This work was done when Xuan Gao, Chenglai Zhong and Jun Xiang were intern at Image Derivative Inc.)</span>
+          </div> -->
+
+          <div class="column has-text-centered">
+            <div class="publication-links" style="margin-top: 0; margin-bottom: 2">
+              <!-- PDF Link. -->
+              <!--
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!--
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yxt7979/Style-Talker"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!--
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+              </span>
+              -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!--
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./resources/teaser.png"
+                type="video/mp4">
+      </video>
+      -->
+      <img src="./static/resources/first_paper.png" class="center">
+      <h2 class="subtitle has-text-centered" style="margin-top: 15px">
+        Given a monocular video sequence, StyleTalker can reconstruct a text-controlled 3D stylized digital head which can be animated to different expressions. We not only achieve high-quality editing results but also effectively preserve the original identity.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="margin-top: -30px">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce StyleTalker, a text-guided method for editing and animating dynamic 3D head avatars from a monocular video. Current 3D scene editing techniques face two main challenges when applied in this task:
+    1) They typically require multi-view videos for accurate geometry reconstruction. Additionally, they are not suited for dynamic scenarios, making them ineffective for editing talking head avatars from a single-view video.
+    2) They struggle with fine-grained local edits, largely due to biases inherited from pre-trained 2D image diffusion models and limitations in detecting detailed facial landmarks.
+    To overcome these challenges, we propose StyleTalker with two key innovations:
+    1) A mesh-enhanced 3D Gaussian reconstruction that combines 3D head priors with multi-view video diffusion, improving the accuracy and flexibility of the reconstruction process.
+    2) A landmark-driven talking head editing method that uses 3D facial landmarks to guide the editing process. By adjusting the strength of the edits based on the distance to these landmarks, our method ensures that the avatar's original identity is preserved while achieving the requested editing.
+    Our extensive experiments demonstrate that StyleTalker outperforms current state-of-the-art methods, delivering high-quality edits and enabling the animation of avatars with diverse facial expressions, all based on a single-source video.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+    <!-- Paper video. -->
+    <!--
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="margin-top: -20px">Pipeline</h2>
+
+        <img src="./static/resources/StyleTalker-pipeline.png" class="center">
+        <div class="content has-text-justified">
+          <p style="margin-top: 30px">
+            StyleTalker takes as input a monocular video and text prompts to edit dynamic 3D scenes represented by 3D Gaussian splitting. (1) we first integrate both 3D head prior and multi-view video diffusion model (V3D) to reconstruct the detailed 3D Gaussian head. (2) We propose a weighted loss related to edit strength b and the 3D facial landmarks, effectively achieve local editing while maintaining the original character identity.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="./static/resources/pipeline.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Results. -->
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Comparison</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We compare our editing results with three baselines: GaussianEditor, IN2N(GS), and GaussCTRL. StyleTalker consistently delivers superior results by preserving both identity and expression, along with high-quality geometry and texture.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="./static/resources/comparison.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Comparisons. -->
+    <!-- <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Training
+        </h2>
+
+        <div class="content has-text-justified">
+          <p>
+            We achieve a remarkable rendering speed over 300FPS. Meanwhile, we demonstrate that our training process is super efficient as well. We are able to recover the coarse appearance of head in several seconds and reconstruct the photo-realistic avatar with fine hair strands and textures within a couple of minutes. We conduct both training and inference on a single Nvidia RTX 3090.            
+          </p>
+        </div>
+        
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="https://raw.githubusercontent.com/xiangjun-xj/project_page_assets/master/FlashAvatar/training.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div> -->
+</section> -->
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Ablation Studies. -->
+    <!-- <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered" style="margin-top: -30px">Novel View Synthesis</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            The basic representation of 3D head avatars in our method is pure non-neural 3D Gaussians, so we can freely adjust the global camera pose to generate target results with any desired rendering view.
+          </p>
+        </div>
+        
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 loop
+                 width="100%">
+            <source src="https://raw.githubusercontent.com/xiangjun-xj/project_page_assets/master/FlashAvatar/nvs.mp4"
+                    type="video/mp4"> -->
+          </video>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body"> -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" style="margin-top: -30px">More Results</h2>
+    <!-- Begin gallery-1. -->
+    <div class="container">
+      <div id="results-carousel1" class="carousel results-carousel">
+        <div class="item g11">
+          <video poster="" id="g11" controls muted loop playsinline height="100%">
+            <source src="./static/resources/id3_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item g12">
+          <video poster="" id="g12" controls muted loop playsinline height="100%">
+            <source src="./static/resources/person0_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item g13">
+          <video poster="" id="g13" controls muted loop playsinline height="100%">
+            <source src="./static/resources/id5_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item g14">
+          <video poster="" id="g14" controls muted loop playsinline height="100%">
+            <source src="./static/resources/malte_12.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <!-- <div class="item g15">
+          <video poster="" id="g15" controls muted loop playsinline height="100%">
+            <source src="https://raw.githubusercontent.com/HaiyaoX/project_page_assets/main/video_demo/zcl_roman_x264.mp4"
+                    type="video/mp4">
+        </video>
+        </div> -->
+      </div>
+    </div>
+  <!-- <h2 class="subtitle has-text-centered" style="margin-top: 15px">
+    We present CosAvatar, a text-driven portrait editing framework based on monocular dynamic NeRF. It allows for both global style editing (top row) and local attribute editing (bottom row) while ensuring strong consistency. It also enables expressive animation of the edited portrait.
+  </h2> -->
+  <!-- <div class="content has-text-justified">
+    <p>
+      In this paper, we have proposed FlashAvatar, which tightly combines a non-neural Gaussian-based radiance field with an explicit parametric face model and takes full advantage of their respective strengths. As a result, it can reconstruct a digital avatar from a monocular video in minutes and animate it at 300FPS while achieving photo-realistic rendering with full personalized details. Its efficiency, robustness, and representation ability have also been verified by extensive experimental results.
+    </p>
+  </div> -->
+
+  </div>
+</section>
+<!-- End gallery. -->
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <div class="content has-text-justified">
+      <p>
+        If you find our paper useful for your work please cite:
+      </p>
+    </div>
+    <pre><code>
+      
+    </code></pre>
+  </div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          <p></p>
+        </div>
+      </div>
+</footer>
+
+</body>
+</html>
